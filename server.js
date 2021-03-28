@@ -2,19 +2,21 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const pre = "y";
-var ball = ["Yes" , "NO"]
-var response = ball[Math.floor(Math.random()*ball.length)]
+
+const ball = ["Yes", "No"];
+
 client.on("ready", () => {
   console.log("I am ready!");
 });
- 
 client.on("message", (message) => {
-  if (message.content(pre + "ping")) {
-    message.channel.send("pong!");
+if (!message.content.startsWith(pre)) return;
+  if (message.content.startsWith(pre + "ping")) {
+    message.channel.send("Pong!");
   }
-else if (message.content.startsWith(pre + "8ball")){
-message.channel.send(response)
+  else if (message.content.startswith(pre + "8ball")){
+var respond = ball[Math.floor(Math.random()*ball.length)]
+ message.channel.send(respond).then().catch(console.error);
 }
 });
  
-client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.FWsBq3Jxt7vp7NyXlmgZqvtj7k4");
+client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.MmtaHRzvkfxzAjfMM4LG_e7dKaQ");
