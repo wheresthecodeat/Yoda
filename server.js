@@ -9,10 +9,10 @@ client.on("ready", () => {
 client.on("message", message => {
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
-    message.channel.send("Pong!");
-  } if (message.content(pre + "prefix")) {
+    message.channel.send("**Pong!**");
+  } else if (message.content.startsWith(pre + "prefix")) {
     message.channel.send(
-      "Here are the prefixes for all the droids: @PokéMaster  is . @MasterMyuu is p  @PokéDroid is p! @Dank Master is pls @PadaGroovy is = @Master Rythm is + @Droid6 is !"
+      "Here are the prefixes for all the droids:" /n "@PokéMaster  is ." /n "@MasterMyuu is p" /n  "@PokéDroid is p!" /n "@Dank Master is pls" /n "@PadaGroovy is =" /n  "@Master Rythm is +" || " @Droid6 is !"
     );
   }
 });
