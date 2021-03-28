@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const pre = "y";
+const pre = "y!";
 
 client.on("ready", () => {
   console.log("I am ready!");
@@ -14,11 +14,16 @@ client.on("message", message => {
     message.channel.send(
       "Here are the prefixes for all the droids: \n <@716390085896962058> is `.` \n <@438057969251254293> is `p` \n <@665301904791699476> is `p!` \n <@270904126974590976> is `pls` \n <@234395307759108106> is = \n <@235088799074484224> is + \n <@159985870458322944> is !"
     );
-  }
-  if (message.content.startsWith(pre + "admin")) {
+  } else if (message.content.startsWith(pre + "admin")) {
     message.channel.send(
-      "for now to get an admin role you would need to invite more members for help ping @Zorg3000 or @Spring Yoda"
+      "To get admin perms you would need to be level 15+ on MEE6 and be an active member."
     );
+  } else if (message.content.startsWith(pre + "carvanha")) {
+    message.channel.send("<@770876531735658558>");
+  } else if (message.content.startsWith(pre + "dialga")) {
+    message.channel.send("<@503083580495495168>");
+  } else if (message.content.startsWith(pre + "honedge")) {
+    message.channel.send("<@694494146123268126>");
   }
 });
 
