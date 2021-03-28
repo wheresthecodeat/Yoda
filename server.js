@@ -1,34 +1,18 @@
-// server.js
-// where your node app starts
+let Discord = require("discord.js");
+let client = new Discord.Client();
 
-// we've started you off with Express (https://expressjs.com/)
-// but feel free to use whatever libraries or frameworks you'd like through `package.json`.
-const express = require("express");
-const app = express();
+var ball = ["Yes", "No"];
 
-// our default array of dreams
-const dreams = [
-  "Find and count some sheep",
-  "Climb a really tall mountain",
-  "Wash the dishes"
-];
+var response = ball[Math.floor(Math.random() * ball.length)];
 
-// make all the files in 'public' available
-// https://expressjs.com/en/starter/static-files.html
-app.use(express.static("public"));
+const pre = "y";
 
-// https://expressjs.com/en/starter/basic-routing.html
-app.get("/", (request, response) => {
-  response.sendFile(__dirname + "/views/index.html");
+client.on("message", message => {
+  if (message.content === pre + "ping") {
+    message.channel.send("pong");
+  } else if (message.content === pre + "8ball") {
+    message.channel.send(response);
+  }
 });
 
-// send the default array of dreams to the webpage
-app.get("/dreams", (request, response) => {
-  // express helps us take JS objects and send them as JSON
-  response.json(dreams);
-});
-
-// listen for requests :)
-const listener = app.listen(process.env.PORT, () => {
-  console.log("Your app is listening on port " + listener.address().port);
-});
+client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.x9u5JvGnBKD83vVCZ_ZSrRr5Dds");
