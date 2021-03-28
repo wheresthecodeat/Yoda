@@ -3,22 +3,16 @@ const client = new Discord.Client();
 
 const pre = "y";
 
-const ball = ["Yes", "No"];
-
 client.on("ready", () => {
   console.log("I am ready!");
 });
 client.on("message", message => {
-  var respond = ball[Math.floor(Math.random() * ball.length)];
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
     message.channel.send("Pong!");
   }
-  else if (message.content.startswith(pre + "8ball")) {
-    message.channel
-      .send(respond)
-      .then()
-      .catch(console.error);
+  else if (message.content.startswith(pre + "prefixes")) {
+ message.channel.send("Here are the prefixes for all the droids:" && " @PokéMaster  is ." && "@MasterMyuu is p" && "@PokéDroid is p!" && "@Dank Master is pls" ||  "@PadaGroovy is =" || "@Master Rythm is +" || "@Droid6 is !")
   }
 });
 
