@@ -32,6 +32,13 @@ client.on("message", message => {
     message.channel.send(
       "https://tenor.com/view/lolol-lol-funny-laughing-hahaha-gif-17418747"
     );
+  } else if (
+    message.content.startsWith("lmao") ||
+    message.content.startsWith("lmfao")
+  ) {
+    message.channel.send(
+      "https://tenor.com/view/lmao-child-toddler-laugh-laughing-gif-10703708"
+    );
   }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
