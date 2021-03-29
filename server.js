@@ -71,8 +71,10 @@ client.on("message", message => {
   } else if (message.content.startsWith(pre + "invite")) {
     message.channel.send("https://discord.gg/GS8PSz4qGD");
   } else if (message.content.startsWith(pre + "members")) {
-    message.channel.send("This server has 6 members excluding bots.");
-  }
+    message.channel.send("This server has 10 verified members excluding bots.");
+  } else if (message.content.startswith(pre + "rules")){
+message.channel.send("Young Padawan, welcome to the council. ules they're there, follow you must: \n 1) Be kind to everyone. Rude you mustn't me. \n 2) Follow the rules for each category. Read the spawn rules before you use the channels. \n 3) Do the stuff in its desired channel. Trades with upto 1000pc and 1 pokémon are allowed in the spawn channels, but battles only in the battle channels and larger trades in trading channels only. \n 4) Spamming is allowed in #padawans-use-bots and #padawans-go-brr. Please restrict spamming in other channels.\n 5) After you have verified, You can always check out #spawn-rules to verify for spawns and shinyhunts. Also check out #prefixes-for-droids for droid prefixes.")
+}
 });
 
 client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
