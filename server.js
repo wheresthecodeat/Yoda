@@ -30,7 +30,8 @@ client.on("message", message => {
     );
   } else if (message.content.startsWith("lol")) {
     message.channel.send(
-    "https://tenor.com/view/lolol-lol-funny-laughing-hahaha-gif-17418747");
+      "https://tenor.com/view/lolol-lol-funny-laughing-hahaha-gif-17418747"
+    );
   }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
@@ -53,13 +54,9 @@ client.on("message", message => {
     message.channel.send("<@694494146123268126>");
   } else if (message.content.startsWith(pre + "invite")) {
     message.channel.send("https://discord.gg/GS8PSz4qGD");
-  } else if (message.content.startsWith(pre + "afk")) {
-    message.channel.send("Work in progress.");
-  } else if (message.content.startsWith(pre + "verify")) {
-    message.channel.send("Work in progress.");
   } else if (message.content.startsWith(pre + "members")) {
-    message.channel.send("6 excluding bots");
-  } else if (message.content.startsWith(pre + "afk"))
+    message.channel.send("This server has 6 members excluding bots.");
+  }
 });
 
 client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
