@@ -31,7 +31,7 @@ client.on("message", message => {
   } else if (message.content.startsWith("lol")) {
     message.channel.send(
       "https://tenor.com/view/lolol-lol-funny-laughing-hahaha-gif-17418747"
-    );
+    ); 
   } else if (
     message.content.startsWith("lmao") ||
     message.content.startsWith("lmfao")
@@ -56,7 +56,7 @@ client.on("message", message => {
     });
   } else if (message.content.startsWith("bye")) {
     message.channel.send("https://tenor.com/view/adios-gif-4813024");
-  }
+  } 
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
     message.channel
