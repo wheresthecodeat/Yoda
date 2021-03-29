@@ -7,7 +7,6 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 client.on("message", message => {
-  if (message.content.startsWith(""))
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
     message.channel.send("**Pong!** Ask another bot.");
