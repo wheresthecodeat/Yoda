@@ -16,7 +16,7 @@ client.on("message", message => {
     message.channel.send(
       "https://tenor.com/view/hello-there-hi-there-greetings-gif-9442662"
     );
-  } else if (message.content.startsWith("oh no") || message.content.startsWith.toLowerCase=== ("yikes")) {
+  } else if (message.content.startsWith("oh no") || message.content.startsWith("yikes") || message.content.startsWith("Yikes")) {
     message.channel.send(
       "https://tenor.com/view/yikes-michael-scott-the-office-my-bad-oof-gif-13450971"
     );
