@@ -19,7 +19,7 @@ client.on("message", message => {
     message.channel.send(
       "https://tenor.com/view/yikes-michael-scott-the-office-my-bad-oof-gif-13450971"
     );
-  } else if (message.content.startsWith("kek")) {
+  } else if (message.content.includes("kek")) {
     message.channel.send("<:kek:825960142377713715>");
   } else if (
     message.content.startsWith(";-;") ||
@@ -51,8 +51,10 @@ client.on("message", message => {
   } else if (message.content.startsWith("meme")) {
     message.channel
       .send("Here's a meme:")
-      setTimeout()(1000).then(sentMessage =>
-        sentMessage.edit("Here's a meme: \nAsk Dank Memer lmaoo.")
+      .then(msg => {
+                    setInterval(function() {
+                        msg.edit("Here's a meme: \nAsk Dank Memer lmaoo")
+                    }, 1000);}
       );
   }
   if (!message.content.startsWith(pre)) return;
