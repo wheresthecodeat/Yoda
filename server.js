@@ -21,7 +21,10 @@ client.on("message", message => {
     );
   } else if (message.content.startsWith("kek")) {
     message.channel.send("<:kek:825960142377713715>");
-  } else if (message.content.startsWith(";-;")) {
+  } else if (
+    message.content.startsWith(";-;") ||
+    message.content.startsWith("cri")
+  ) {
     message.channel.send(
       "https://tenor.com/view/silent-tears-crying-sad-gif-10045699"
     );
