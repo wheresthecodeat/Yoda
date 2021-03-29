@@ -40,13 +40,10 @@ client.on("message", message => {
       "https://tenor.com/view/lmao-child-toddler-laugh-laughing-gif-10703708"
     );
   } else if (message.content.startsWith("idk")) {
-    message.channel.send(
-      "https://tenor.com/view/elmo-shrug-gif-5094560"
-    );
+    message.channel.send("https://tenor.com/view/elmo-shrug-gif-5094560");
+  } else if (message.content.startsWith("GG <@")) {
+    message.channel.send("MEE6 go brr.");
   }
-else if (message.content.startsWith("GG <@")){
-message.channel.send("MEE6 go brr.")
-}
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
     message.channel
