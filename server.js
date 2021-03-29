@@ -19,8 +19,12 @@ client.on("message", message => {
     message.channel.send(
       "https://tenor.com/view/yikes-michael-scott-the-office-my-bad-oof-gif-13450971"
     );
-  } else if (message.content.startsWith("joke")) {
-    message.channel.send("Whats the hardest shape to get out of? A trapezoid :kek:");
+  } else if (message.content.startsWith("kek")) {
+    message.channel.send("<:kek:825960142377713715>");
+  } else if (message.content.startsWith(";-;")) {
+    message.channel.send(
+      "https://tenor.com/view/silent-tears-crying-sad-gif-10045699"
+    );
   }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
@@ -47,7 +51,7 @@ client.on("message", message => {
     message.channel.send("Work in progress.");
   } else if (message.content.startsWith(pre + "verify")) {
     message.channel.send("Work in progress.");
-  } 
+  }
 });
 
 client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
