@@ -43,6 +43,11 @@ client.on("message", message => {
     message.channel.send("https://tenor.com/view/elmo-shrug-gif-5094560");
   } else if (message.content.startsWith("GG <@")) {
     message.channel.send("MEE6 go brr.");
+  } else if (
+    message.content.startsWith("pog") ||
+    message.content.startsWith("POG")
+  ) {
+    message.channel.send("https://tenor.com/view/pog-gif-20546266");
   }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
