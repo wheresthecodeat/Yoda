@@ -19,7 +19,7 @@ client.on("message", message => {
     message.channel.send(
       "https://tenor.com/view/yikes-michael-scott-the-office-my-bad-oof-gif-13450971"
     );
-  } else if (message.content.includes("kek")) {
+  } else if (message.content.startsWith("kek")) {
     message.channel.send("<:kek:825960142377713715>");
   } else if (
     message.content.startsWith(";-;") ||
