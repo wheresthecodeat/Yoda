@@ -7,9 +7,20 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 client.on("message", message => {
-  if (message.content.startsWith("Hi") || message.content.startsWith("hi") || (message.content.startsWith("yo")) || message.content.startsWith("Yo")){
-message.channel.send("https://tenor.com/view/hello-there-hi-there-greetings-gif-9442662")
-}
+  if (
+    message.content.startsWith("Hi") ||
+    message.content.startsWith("hi") ||
+    message.content.startsWith("yo") ||
+    message.content.startsWith("Yo")
+  ) {
+    message.channel.send(
+      "https://tenor.com/view/hello-there-hi-there-greetings-gif-9442662"
+    );
+  } else if (message.content.startsWith("oh no") || message.content.startsWith("Yikes") || message.content.startswith()) {
+    message.channel.send(
+      "https://tenor.com/view/yikes-michael-scott-the-office-my-bad-oof-gif-13450971"
+    );
+  }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
     message.channel.send("**Pong!** Ask another bot.");
@@ -27,9 +38,8 @@ message.channel.send("https://tenor.com/view/hello-there-hi-there-greetings-gif-
     message.channel.send("<@503083580495495168>");
   } else if (message.content.startsWith(pre + "honedge")) {
     message.channel.send("<@694494146123268126>");
-  } else if (message.content.startsWith(pre + "invite link")) {
-    message.channel.send(
-      "https://discord.gg/GS8PSz4qGD");
+  } else if (message.content.startsWith(pre + "invite")) {
+    message.channel.send("https://discord.gg/GS8PSz4qGD");
   }
 });
 
