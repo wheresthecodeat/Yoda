@@ -48,6 +48,8 @@ client.on("message", message => {
     message.content.startsWith("POG")
   ) {
     message.channel.send("https://tenor.com/view/pog-gif-20546266");
+  } else if (message.content.startsWith("meme")) {
+    message.channel.send("ask dank memer, hint PLS MEME");
   }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
