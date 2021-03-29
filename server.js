@@ -7,6 +7,7 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 client.on("message", message => {
+  if (message.content.startsWith(""))
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
     message.channel.send("**Pong!** Ask another bot.");
@@ -24,6 +25,9 @@ client.on("message", message => {
     message.channel.send("<@503083580495495168>");
   } else if (message.content.startsWith(pre + "honedge")) {
     message.channel.send("<@694494146123268126>");
+  } else if (message.content.startsWith(pre + "invite link")) {
+    message.channel.send(
+      "https://discord.gg/GS8PSz4qGD");
   }
 });
 
