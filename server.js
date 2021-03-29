@@ -77,7 +77,10 @@ client.on("message", message => {
       "Rules they're there, follow you must: \n 1) Be kind to everyone. Rude you mustn't me. \n 2) Follow the rules for each category. Read the spawn rules before you use the channels. \n 3) Do the stuff in its desired channel. Trades with upto 1000pc and 1 pokémon are allowed in the spawn channels, but battles only in the battle channels and larger trades in trading channels only. \n 4) Spamming is allowed in <#824679720247492630>(command spam) and <#824953755782873138>. Please restrict spamming in other channels.\n 5) After you have verified, You can always check out <#824684662068346930> to verify for spawns and shinyhunts. Also check out <#825622055419510794> for droid prefixes."
     );
   } else if (message.content.startsWith(pre + "status")) {
-message.channel.send("")}
+    message.channel.send(
+      "Bot's up and running though it will be offline if Spring Yoda and Zorg3000 don't refrfesh the code every five minutes. Don't ping us since we may be busy/sleeping if the bot is offline."
+    );
+  }
 });
 
 client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
