@@ -49,13 +49,13 @@ client.on("message", message => {
   ) {
     message.channel.send("https://tenor.com/view/pog-gif-20546266");
   } else if (message.content.startsWith("meme")) {
-    message.channel
-      .send("Here's a meme:")
-      .then(msg => {
-                    setInterval(function() {
-                        msg.edit("Here's a meme: \nAsk Dank Memer lmaoo")
-                    }, 1000);}
-      );
+    message.channel.send("Here's a meme:").then(msg => {
+      setInterval(function() {
+        msg.edit("Here's a meme: \nAsk Dank Memer lmaoo");
+      }, 1000);
+    });
+  } else if (message.content.startsWith("bye")) {
+    message.channel.send("https://tenor.com/view/adios-gif-4813024");
   }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
@@ -64,7 +64,7 @@ client.on("message", message => {
       .then(sentMessage => sentMessage.edit("**Pong!** Ask another bot."));
   } else if (message.content.startsWith(pre + "prefix")) {
     message.channel.send(
-      "Here are the prefixes for all the droids: \n <@716390085896962058> is `.` \n <@438057969251254293> is `p` \n <@665301904791699476> is `p!` \n <@270904126974590976> is `pls` \n <@234395307759108106> is = \n <@235088799074484224> is + \n <@159985870458322944> is !"
+      "Here are the prefixes for all the droids: \n <@716390085896962058> is `.` \n <@438057969251254293> is `p` \n <@665301904791699476> is `p!` \n <@270904126974590976> is `pls` \n <@234395307759108106> is `=` \n <@235088799074484224> is `+` \n <@159985870458322944> is `!`"
     );
   } else if (message.content.startsWith(pre + "admin")) {
     message.channel.send(
@@ -85,11 +85,8 @@ client.on("message", message => {
       "Rules they're there, follow you must: \n 1) Be kind to everyone. Rude you mustn't me. \n 2) Follow the rules for each category. Read the spawn rules before you use the channels. \n 3) Do the stuff in its desired channel. Trades with upto 1000pc and 1 pokémon are allowed in the spawn channels, but battles only in the battle channels and larger trades in trading channels only. \n 4) Spamming is allowed in <#824679720247492630>(command spam) and <#824953755782873138>. Please restrict spamming in other channels.\n 5) After you have verified, You can always check out <#824684662068346930> to verify for spawns and shinyhunts. Also check out <#825622055419510794> for droid prefixes."
     );
   } else if (message.content.startsWith(pre + "status")) {
-    message.channel.send(
-      "Bot's up and running though it will be offline if Spring Yoda and Zorg3000 don't refrfesh the code every five minutes. Don't ping us since we may be busy/sleeping if the bot is offline."
-    );
+    message.channel.send("Bot's up and running. Should be online 24/7.");
   }
 });
 
 client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
-;
