@@ -3,13 +3,11 @@ const client = new Discord.Client();
 
 const pre = "y!";
 
-var hi = "hi";
-
 client.on("ready", () => {
   console.log("I am ready!");
 });
 client.on("message", message => {
-  if (message.content.startsWith(hi.toLowerCase())){
+  if (message.content.startsWith("Hi") || message.content.startsWith("hi")){
 message.channel.send("https://tenor.com/view/hello-there-hi-there-greetings-gif-9442662")
 }
   if (!message.content.startsWith(pre)) return;
