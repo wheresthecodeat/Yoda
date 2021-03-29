@@ -49,7 +49,11 @@ client.on("message", message => {
   ) {
     message.channel.send("https://tenor.com/view/pog-gif-20546266");
   } else if (message.content.startsWith("meme")) {
-    message.channel.send("ask dank memer, hint PLS MEME");
+    message.channel
+      .send("Here's a meme:")
+      setTimeout()(1000).then(sentMessage =>
+        sentMessage.edit("Here's a meme: \nAsk Dank Memer lmaoo.")
+      );
   }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
@@ -86,3 +90,4 @@ client.on("message", message => {
 });
 
 client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
+;
