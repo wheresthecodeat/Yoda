@@ -86,7 +86,10 @@ client.on("message", message => {
     );
   } else if (message.content.startsWith(pre + "status")) {
     message.channel.send("Bot's up and running. Should be online 24/7.");
-  }
+  } else if (message.content.startswith(pre + "guide")) {
+message.channel.send("Hello, welcome to Yoda's Council. \nFirstly, check out <#824664483707617342> and <#824665084303114250> and pick your roles. \nThen, you may go to <#824684662068346930> to verify for spawns. \nBe sure to check out <#824663982408728636> to check out the giveaways.")
+.then( msg => )
+}
 });
 
 client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
