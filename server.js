@@ -56,12 +56,11 @@ client.on("message", message => {
     });
   } else if (message.content.startsWith("bye")) {
     message.channel.send("https://tenor.com/view/adios-gif-4813024");
-  } else if message.content.startsWith("")
+  }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
-    message.channel.send("**Pong!**")
-        message.edit("**Pong!** Ask another bot.");
-      
+    message.channel.send("**Pong!**");
+    message.edit("**Pong!** Ask another bot.");
   } else if (message.content.startsWith(pre + "prefix")) {
     message.channel.send(
       "Here are the prefixes for all the droids: \n <@716390085896962058> is `.` \n <@438057969251254293> is `p` \n <@665301904791699476> is `p!` \n <@270904126974590976> is `pls` \n <@234395307759108106> is `=` \n <@235088799074484224> is `+` \n <@159985870458322944> is `!`"
@@ -90,7 +89,10 @@ client.on("message", message => {
     message.channel.send(
       "Hello, welcome to Yoda's Council. \nFirstly, check out <#824664483707617342> and <#824665084303114250> and pick your roles. \nThen, you may go to <#824684662068346930> to verify for spawns. \nBe sure to check out <#824663982408728636> to check out the giveaways."
     );
-  }
-});
+  } else if (command === 'kick'){
+    client.commands.get("kick").execute(message, args);
+  }else if (command === 'ban'){
+    client.commands.get("ban").execute(message, args);
+};
 
 client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
