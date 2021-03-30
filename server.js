@@ -52,7 +52,7 @@ client.on("message", message => {
     message.channel.send("Here's a meme:").then(msg => {
       setInterval(function() {
         msg.edit("Here's a meme: \nAsk Dank Memer lmaoo");
-      }, 1000);
+      }, 10);
     });
   } else if (message.content.startsWith("bye")) {
     message.channel.send("https://tenor.com/view/adios-gif-4813024");
