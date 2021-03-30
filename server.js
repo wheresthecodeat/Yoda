@@ -51,19 +51,16 @@ client.on("message", message => {
   } else if (message.content.startsWith("meme")) {
     message.channel.send("Here's a meme:").then(msg => {
       setInterval(function() {
-        msg.edit("Here's a meme: \nAsk Dank Memer lmaoo");
-      }, 10);
+        message.edit("Here's a meme: \nAsk Dank Memer lmaoo");
+      }, 500);
     });
   } else if (message.content.startsWith("bye")) {
     message.channel.send("https://tenor.com/view/adios-gif-4813024");
-  }
+  } else if message.content.startsWith("")
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
-    message.channel.send("**Pong!**").then(msg => {
-      setInterval(function() {
-        msg.edit("**Pong!** Ask another bot.");
-      }, 200);
-    });
+    message.channel.send("**Pong!**")
+        message.edit("**Pong!** Ask another bot.");
       
   } else if (message.content.startsWith(pre + "prefix")) {
     message.channel.send(
