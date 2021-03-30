@@ -91,4 +91,4 @@ client.on("message", message => {
   }
 });
 
-client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
+client.login("hidden");
