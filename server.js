@@ -31,7 +31,7 @@ client.on("message", message => {
   } else if (message.content.startsWith("lol")) {
     message.channel.send(
       "https://tenor.com/view/lolol-lol-funny-laughing-hahaha-gif-17418747"
-    ); 
+    );
   } else if (
     message.content.startsWith("lmao") ||
     message.content.startsWith("lmfao")
@@ -56,7 +56,7 @@ client.on("message", message => {
     });
   } else if (message.content.startsWith("bye")) {
     message.channel.send("https://tenor.com/view/adios-gif-4813024");
-  } 
+  }
   if (!message.content.startsWith(pre)) return;
   if (message.content.startsWith(pre + "ping")) {
     message.channel
@@ -86,10 +86,11 @@ client.on("message", message => {
     );
   } else if (message.content.startsWith(pre + "status")) {
     message.channel.send("Bot's up and running. Should be online 24/7.");
-  } else if (message.content.startswith(pre + "guide")) {
-message.channel.send("Hello, welcome to Yoda's Council. \nFirstly, check out <#824664483707617342> and <#824665084303114250> and pick your roles. \nThen, you may go to <#824684662068346930> to verify for spawns. \nBe sure to check out <#824663982408728636> to check out the giveaways.")
-.then( msg => )
-}
+  } else if (message.content.startsWith(pre + "guide")) {
+    message.channel.send(
+      "Hello, welcome to Yoda's Council. \nFirstly, check out <#824664483707617342> and <#824665084303114250> and pick your roles. \nThen, you may go to <#824684662068346930> to verify for spawns. \nBe sure to check out <#824663982408728636> to check out the giveaways."
+    );
+  }
 });
 
 client.login("ODI1NzAxNjM4NDY2NTY4MjAz.YGBwkw.aTtvwJC18MSdbELAqrvvhk54o5g");
